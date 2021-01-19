@@ -6,7 +6,7 @@ echo '<b>2.1</b><br>';
 echo task1(['blue', 'red', 'yellow', 'grey'], true);
 
 echo '<br><br><b>2.2</b><br>';
-echo task2('-', 20, 4);
+echo task2('/', 4, 3, 0.5);
 
 echo '<br><br><b>2.3</b><br>';
 echo task3(4, 8);

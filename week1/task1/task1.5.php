@@ -43,5 +43,5 @@ $cars = ['BMV' => $bmv, 'TOYOTA' => $toyota, 'OPEL' => $opel];
 
 foreach ($cars as $name => $car) {
     echo "Car <b>$name</b><br>";
-    echo "{$car[model]}, {$car[speed]}, {$car[doors]}, {$car[year]}<br><br>";
+    echo "{$car['model']}, {$car['speed']}, {$car['doors']}, {$car['year']}<br><br>";
 }

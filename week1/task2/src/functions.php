@@ -7,12 +7,13 @@
 
 function task1($arrayStr, $index = false)
 {
-    foreach ($arrayStr as $item) {
-        echo "<p>" . $item . "</p>";
-    }
     if ($index == true) {
         $str = implode(' ', $arrayStr);
         return $str;
+    } else {
+        foreach ($arrayStr as $item) {
+            echo "<p>" . $item . "</p>";
+        }
     }
 }
 
@@ -23,6 +24,13 @@ function task1($arrayStr, $index = false)
 Остальные аргументы это целые и/или вещественные числа.*/
 
 function task2($operation, ...$numbers) {
+
+    if (count($numbers) != count(array_filter($numbers, function($n) {
+            if (is_int($n) or is_float($n)) return true;
+        }))) {
+        trigger_error("All arguments must be integers or decimal numbers!");
+        return false;
+    }
 
     switch ($operation) {
         case '+':
@@ -42,11 +50,10 @@ function task2($operation, ...$numbers) {
             }
             break;
 
-        //Не работает, не могу понять, почему.
         case '*':
             $res = 1;
-            foreach ($numbers as $number);{
-            $res *= $number;
+            foreach ($numbers as $number) {
+                $res *= $number;
         }
             return $res;
 
