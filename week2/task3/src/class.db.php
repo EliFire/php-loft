@@ -77,7 +77,7 @@ class Db
         if (!$data) {
             return false;
         }
-        return $data;
+        return reset($data);
     }
 
     public function exec(string $query, $_method, array $params = []): int//просто выполняет запрос
