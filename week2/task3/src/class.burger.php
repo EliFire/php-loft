@@ -3,6 +3,12 @@
 class Burger
 {
 
+    private Db $db;
+    /*public function __construct()
+    {
+        $this->db = Db::getInstance();//подключение к БД
+    }*/
+
     public function getUserByEmail(string $email)
     {
         $db = Db::getInstance();//подключение к БД
@@ -13,7 +19,7 @@ class Burger
     public function createUser(string $email, string $name)
     {
         $db = Db::getInstance();
-        $query = "insert into users(email, `name`) values (:email, :name)";
+        $query = "insert into users(`email`, `name`) values (:email, :name)";
         $result = $db->exec($query,
             __METHOD__,
             [
@@ -36,7 +42,7 @@ class Burger
             $query,
             __METHOD__,
             [
-                ':userId' => $userId,
+                ':user_Id' => $userId,
                 ':adress' => $data['adress'],
                 ':created_at' => date('Y-m-d H:i:s')
             ]

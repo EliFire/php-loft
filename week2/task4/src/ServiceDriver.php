@@ -3,7 +3,7 @@ class ServiceDriver implements ServiceInterface
 {
 
     private $price;
-    private function __construct($price) {
+    public function __construct($price) {
         $this->price = $price;
     }
 

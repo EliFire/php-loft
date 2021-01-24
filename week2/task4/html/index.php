@@ -48,6 +48,6 @@ Gps в салон - 15 рублей в час, минимум 1 час. Окру
 
 /** @var $tarif */
 $tarif = new TarifBasic(5,60);
-//$tarif->addService(new ServiceGPS(15));
-//$tarif->addService(new ServiceDriver(100));
+$tarif->addService(new ServiceGPS(15));
+$tarif->addService(new ServiceDriver(100));
 echo $tarif->countPrice();

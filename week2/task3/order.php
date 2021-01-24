@@ -25,7 +25,7 @@ $burger = new Burger();
 
 //проверка, есть ли пользователь
 $email = $_POST ['email'];
-$name = '';
+$name = $_POST ['name'];
 
 $adressFields = ['phone', 'street', 'home', 'part', 'appt', 'floor'];
 $adress = '';

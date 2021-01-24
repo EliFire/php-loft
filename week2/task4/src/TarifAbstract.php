@@ -1,5 +1,5 @@
 <?php
-abstract class TarifAbstract implements TarifInterfacepublic
+abstract class TarifAbstract implements TarifInterface
 {
 
     protected $priceKm;
