@@ -2,8 +2,8 @@
 include "../src/ServiceInterface.php";
 include "../src/TarifInterface.php";
 include "../src/ServiceGPS.php";
-include "../src/TarifBasic.php";
 include "../src/TarifAbstract.php";
+include "../src/TarifBasic.php";
 include "../src/ServiceDriver.php";
 include "../src/TarifHour.php";
 include "../src/TarifStudent.php";
